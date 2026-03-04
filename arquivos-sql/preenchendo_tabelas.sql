@@ -9,4 +9,10 @@ INSERT INTO categorias (nome) VALUES
 ('Instantâneos');
 
 INSERT INTO comidas (nome, preco, estoque, categoria_id) VALUES
-('Leite Integral 1L', '7.49', '200', '1');
+('Leite Integral 1L', '7.49', '200', '1'),
+('Sobrecoxa 1kg', '8.29', '400', '2'),
+('Nissin Galinha Caipira Turma da Mônica', '2.49', '50', '9'),
+('Suco de Uva sem álcool 1L', '6.99', '10', '3'),
+('Lipy Sabor Pizza', '0.99', '1', '5'),
+('Whiskas 10g', '5.79', '63', '4'),
+('Tomate Cereja', '0.39', '1000', '6');
