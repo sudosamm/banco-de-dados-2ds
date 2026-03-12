@@ -16,3 +16,14 @@ INSERT INTO comidas (nome, preco, estoque, categoria_id) VALUES
 ('Lipy Sabor Pizza', '0.99', '1', '5'),
 ('Whiskas 10g', '5.79', '63', '4'),
 ('Tomate Cereja', '0.39', '1000', '6');
+
+WITH cliente_louis AS (
+  SELECT id FROM clientes WHERE nome = 'Louis'
+)
+INSERT INTO pedidos (cliente_id, status)
+SELECT id, 'Pendente' FROM cliente_louis;
+
+INSERT INTO itens_pedido (pedido_id, comida_id, quantidade, preco_unitario)
+VALUES ('1', '5', '1', '0.99'),
+('1', '4', '1', '6.99'),
+('1', '3', '2', '2.49');
