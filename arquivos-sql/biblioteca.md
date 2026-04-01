@@ -82,7 +82,7 @@ CREATE TABLE livros(
   autorId INT REFERENCES autores(id),
   sinopse TEXT NOT NULL,
   data_publicacao DATE NOT NULL,
-  capa_dura BOOLEAN NOT NOT NULL, 
+  capa_dura BOOLEAN NOT NULL, 
   classificacaoId INT REFERENCES classificacoes(id),
   quantidade INT NOT NULL,
   editoraId INT REFERENCES editoras(id)
