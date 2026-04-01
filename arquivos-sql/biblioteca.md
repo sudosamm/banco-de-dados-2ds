@@ -30,3 +30,16 @@ nome do cliente, dia do agendamento, data de devolução
 itens agendados tem que ter
 livro agendado, quantidade
 ```
+
+Criação da tabela de clientes
+```sql
+CREATE TABLE clientes (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL,
+  idade INT NOT NULL,
+  endereco VARCHAR(50) NOT NULL,
+  cpf VARCHAR(12) UNIQUE NOT NULL,
+  email VARCHAR(50) NOT NULL UNIQUE,
+  telefone VARCHAR(11) NOT NULL
+);
+```
