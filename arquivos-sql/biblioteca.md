@@ -82,7 +82,7 @@ CREATE TABLE livros(
   autorId INT REFERENCES autores(id),
   sinopse TEXT NOT NULL,
   data_publicacao DATE NOT NULL,
-  capa_dura BOOLEANNOT NOT NULL, 
+  capa_dura BOOLEAN NOT NOT NULL, 
   classificacaoId INT REFERENCES classificacoes(id),
   quantidade INT NOT NULL,
   editoraId INT REFERENCES editoras(id)
@@ -102,7 +102,7 @@ Criação da tabela de agendamentos
 ```sql
 CREATE TABLE agendamentos (
   id SERIAL PRIMARY KEY,
-  clienteId INT REFERENCES clientes(id) ON DELETE CASCACE,
+  clienteId INT REFERENCES clientes(id) ON DELETE CASCADE,
   data_agendamento TIMESTAMP DEFAULT NOW(),
   data_devolucao TIMESTAMP NOT NULL
 );
