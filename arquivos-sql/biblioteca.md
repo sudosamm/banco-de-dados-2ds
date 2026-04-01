@@ -73,3 +73,18 @@ CREATE TABLE editoras(
   nome VARCHAR(50) NOT NULL
 );
 ```
+Criação da tabela de livros
+```sql
+CREATE TABLE livros(
+  id SERIAL PRIMARY KEY,
+  titulo VARCHAR(50) NOT NULL,
+  categoriaId INT REFERENCES categorias(id),
+  autorId INT REFERENCES autores(id),
+  sinopse TEXT NOT NULL,
+  data_publicacao DATE NOT NULL,
+  capa_dura BOOLEANNOT NOT NULL, 
+  classificacaoId INT REFERENCES classificacoes(id),
+  quantidade INT NOT NULL,
+  editoraId INT REFERENCES editoras(id)
+);
+```
