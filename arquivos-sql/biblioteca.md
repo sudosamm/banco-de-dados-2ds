@@ -43,3 +43,33 @@ CREATE TABLE clientes (
   telefone VARCHAR(11) NOT NULL
 );
 ```
+Criação da tabela de categorias
+```sql
+CREATE TABLE categorias (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL
+);
+```
+Criação da tabela de autores
+```sql
+CREATE TABLE autores (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL,
+  prefacio VARCHAR(50) NOT NULL
+);
+```
+Criação da tabela de classificações
+```sql
+CREATE TABLE classificacoes (
+  id SERIAL PRIMARY KEY,
+  faixa_etaria VARCHAR(50) NOT NULL,
+  nome VARCHAR(50) NOT NULL
+);
+```
+Criação da tabela de editoras
+```sql
+CREATE TABLE editoras(
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL
+);
+```
