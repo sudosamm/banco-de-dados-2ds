@@ -88,3 +88,30 @@ CREATE TABLE livros(
   editoraId INT REFERENCES editoras(id)
 );
 ```
+Criação da tabela de edições
+```sql
+CREATE TABLE edicoes (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL,
+  ano INT NOT NULL,
+  data_publicacao DATE NOT NULL,
+  livroId INT REFERENCES livros(id) ON DELETE CASCADE
+);
+```
+Criação da tabela de agendamentos
+```sql
+CREATE TABLE agendamentos (
+  id SERIAL PRIMARY KEY,
+  clienteId INT REFERENCES clientes(id) ON DELETE CASCACE,
+  data_agendamento TIMESTAMP DEFAULT NOW(),
+  data_devolucao TIMESTAMP NOT NULL
+);
+```
+Criação da tabela de itens agendados
+```sql
+CREATE TABLE itens_agendados(
+  id SERIAL PRIMARY KEY,
+  livroId INT REFERENCES livros(id) ON DELETE CASCADE,
+  quantidade_agendada INT NOT NULL
+);
+```
